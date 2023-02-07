@@ -1,0 +1,132 @@
+.header{
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0 40px;
+}
+
+.header-logo{
+    height: 66px;
+    cursor: pointer;
+}
+
+.header-nav-item{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 20px 0 36px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.mobile-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: var(--bg-black);
+    height: 100vh;
+    width: 100vw;
+    transform: translateX(100%);
+    text-align: left;
+    padding: 32px;
+    top: 0;
+    left: 0;
+    transition: transform .3s ease-in-out 0s;
+    z-index: 1;
+}
+
+.mobile-menu.overlay {
+    transform: translateX(0px);
+}
+
+.mobile-menu-button-wrapper{
+    z-index: 2;
+}
+  
+.mobile-navbar {
+    margin-top: 95px;
+    overflow-y: scroll;
+    width: 90%;
+}
+  
+.mobile-nav-item {
+    padding: 25px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: var(--bg-light-gray);
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.hero-section-wrapper{
+    position: relative;
+    background-image: url(https://web-images.credcdn.in/_next/assets/images/home-page/hero-bg.png);
+    background-size: cover;
+    background-position: right bottom;
+    min-height: 100vh;
+    width: 100vw;
+    padding-bottom: 100px;
+}
+
+.hero-section{
+    min-height: 75vh;
+    text-align: center;
+}
+
+.hero-heading{
+    top: 10%;
+    font-size: 106px;
+    font-weight: 700;
+}
+
+.hero-subheading{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 35px 50px;
+    line-height: 30px;
+}
+
+@media all and (max-width: 1279px){
+    .header-logo {
+        height: 53px;
+    }
+
+    .header-nav-item {
+        margin: 0 16px 0 28px;
+    }
+
+    .hero-heading{
+        font-size: 82px;
+        line-height: 92px;
+    }
+
+    .hero-subheading{
+        font-size: 25px;
+    }
+}
+
+@media all and (max-width: 767px){
+    .header {
+        padding-bottom: 50px;
+    }
+
+    .hero-section{
+        align-items: flex-start;
+        text-align: left;
+        min-height: 70vh;
+    }
+
+    .hero-heading{
+        font-size: 55px;
+        line-height: 47.5px;
+        width: 270px;
+        margin-top: 60px;
+    }
+
+    .hero-subheading{
+        font-size: 16px;
+        line-height: 22px;
+        margin: 35px 0;
+    }
+}
